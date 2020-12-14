@@ -1,6 +1,7 @@
 package nonni.tutorialmod.world.gen;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Feature;
@@ -44,12 +45,16 @@ public class ModOreGen {
     //
     private static void genOre(Biome biome, int count, int bottomOffset, int topOffset, int max, OreFeatureConfig.FillerBlockType filler, BlockState defaultBlockState, int size) {
         // ?
-        /*CountRangeConfig range = new CountRangeConfig(count, bottomOffset, topOffset, ma);
+
+        /*
+        CountRangeConfig range = new CountRangeConfig(count, bottomOffset, topOffset, ma);
         OreFeatureConfig feature = new OreFeatureConfig(filler, defaultBlockState, size);
         ConfiguredPlacement config = Placement.COUNT_RANGE.configure(range);
 
         // Now we add the feature
         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(feature).withPlacement(config));
+
+        biome.getGenerationSettings().
 
          */
     }
