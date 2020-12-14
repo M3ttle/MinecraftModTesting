@@ -33,8 +33,12 @@ public class ModOreGen {
     private static final ArrayList<ConfiguredFeature<?, ?>> endOres = new ArrayList<ConfiguredFeature<?, ?>>();
 
 
+
+
     public static void registerOres() {
         final int vein_size = 6;
+
+
         overWorldOres.add(register("blood_ore", Feature.ORE.withConfiguration(new OreFeatureConfig(
                 OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegisterBlocks.BLOOD_ORE.get().getDefaultState(), vein_size))
                 .range(64).square()// Spawn height start, right now 128 is the max
@@ -52,7 +56,6 @@ public class ModOreGen {
     //@SubscribeEvent(priority = EventPriority.HIGHEST)
     @SubscribeEvent
     public static void generateOres(BiomeLoadingEvent event){
-
         BiomeGenerationSettingsBuilder generation = event.getGeneration();
         if(event.getCategory().equals(Biome.Category.NETHER)) {
             for (ConfiguredFeature<?, ?> ore : netherOres) {
@@ -75,26 +78,6 @@ public class ModOreGen {
         // max = Max Y value. 50 - 5 = 45.
         // will spawn between 8 - 45 Y
         // size = max ore together in a chunk
-    }
-
-    //
-    private static void genOre(Biome biome, int count, int bottomOffset, int topOffset, int max, OreFeatureConfig.FillerBlockType filler, BlockState defaultBlockState, int size) {
-        // ?
-
-        /*
-
-        CountRangeConfig range = new CountRangeConfig(count, bottomOffset, topOffset, ma);
-        OreFeatureConfig feature = new OreFeatureConfig(filler, defaultBlockState, size);
-        ConfiguredPlacement config = Placement.COUNT_RANGE.configure(range);
-
-        // Now we add the feature
-        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(feature).withPlacement(config));
-
-        biome.getGenerationSettings().
-
-         */
-
-
     }
 
     private static <FC extends IFeatureConfig>ConfiguredFeature<FC, ?> register(String name, ConfiguredFeature<FC, ?> configuredFeature) {

@@ -2,6 +2,7 @@ package nonni.tutorialmod;
 
 
 import nonni.tutorialmod.util.RegisterItems;
+import nonni.tutorialmod.world.gen.ModOreGen;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -41,6 +42,7 @@ public class TutorialMod {
 	// Setup function
 	private void setup(final FMLCommonSetupEvent event) {
 		logger.info("Setup method registered.");
+		ModOreGen.registerOres();
 	}
 	
 	// Client Registers
