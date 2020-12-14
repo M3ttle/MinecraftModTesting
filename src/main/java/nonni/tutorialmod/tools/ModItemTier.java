@@ -14,7 +14,7 @@ public enum ModItemTier implements IItemTier {
 	// 6 damage = 3 hearts (Divided by 2)
 	
 	// Attackspeed has base value of 4, what is then sent in is substraced from that
-	BLOOD(3, 1000, 20.0F, 33.0F, 50, () -> {
+	BLOOD(4, 1000, 20.0F, 33.0F, 50, () -> {
 		return Ingredient.fromItems(RegisterItems.BLOOD_INGOT.get());
 	});
 	

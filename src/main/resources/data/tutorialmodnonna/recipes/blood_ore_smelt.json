@@ -1,10 +1,10 @@
 {
 	"type": "minecraft:smelting",
 	"ingredient": {
-		"item": "tutorialmodnonna:blood_ore"
+		"item": "minecraft:dirt"
 	},
-	"result": "tutorialmodnonna:blood_ingot",
+	"result": "tutorialmodnonna:blood_ore",
 	"experience": 1,
-	"cookingtime": 600,
+	"cookingtime": 200,
 	"_comment": "20 ticks = 1 sec"
 }
