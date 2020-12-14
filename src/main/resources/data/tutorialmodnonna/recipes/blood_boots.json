@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":[
+    "   ",
+    "x x",
+    "x x"
+  ],
+  "key":{
+    "x":{
+      "item": "tutorialmodnonna:blood_ingot"
+    }
+  },
+  "result":{
+    "item": "tutorialmodnonna:blood_boots",
+    "count": 1
+  }
+}

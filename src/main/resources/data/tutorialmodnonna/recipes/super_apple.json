@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "tutorialmodnonna:blood_ingot"
+		},
+		{
+			"item": "minecraft:apple"
+		}
+	],
+	"result":{
+		"item": "tutorialmodnonna:super_apple",
+		"count": 1
+	}
+}
