@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "_comment_replace": "boolean if we should replace some other tags from other mods",
+  "_comment2_replace": "To replace a Minecraft Tag, there needs to be from a minecraft tag folder (not mod_id) - replace value should still be false",
+  "values": [
+    "minecraft:emerald",
+    "tutorialmodnonna:blood_ingot"
+  ],
+  "_comment_values": "groups everything in values together for whoever uses the gems tag"
+}

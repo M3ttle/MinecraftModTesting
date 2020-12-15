@@ -7,7 +7,9 @@
 	],
 	"key":{
 		"x":{
-			"item": "tutorialmodnonna:blood_ingot"
+			"tag": "tutorialmodnonna:gems",
+			"_withoutTag_should_be_item": "tutorialmodnonna:blood_ingot",
+			"_comment": "check out forge repo to find tags, for example: forge:gems/diamond"
 		}
 	},
 	"result":{

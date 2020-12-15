@@ -28,11 +28,11 @@ public class ModOreGen {
     private static final ArrayList<ConfiguredFeature<?, ?>> endOres = new ArrayList<ConfiguredFeature<?, ?>>();
 
     public static void registerOres() {
-        final int vein_size = 6;
+        final int vein_size = 3;
         overWorldOres.add(register("blood_ore", Feature.ORE.withConfiguration(new OreFeatureConfig(
                 OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegisterBlocks.BLOOD_ORE.get().getDefaultState(), vein_size))
-                .range(64).square()// Spawn height start, right now 128 is the max
-                .func_242731_b(64)// Chunk spawn frequency (How many ores spawn per chunk - Mapping
+                .range(20).square()// Spawn height start, right now 128 is the max
+                .func_242731_b(25)// Chunk spawn frequency (How many ores spawn per chunk - Mapping
         ));
 
         // Generate ores in:
