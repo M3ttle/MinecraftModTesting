@@ -1,4 +1,4 @@
-package nonni.tutorialmod.items;
+package nonni.tutorialmod.objects.items;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

@@ -1,4 +1,4 @@
-package nonni.tutorialmod.blocks;
+package nonni.tutorialmod.objects.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;

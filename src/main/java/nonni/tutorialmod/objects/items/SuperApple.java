@@ -1,4 +1,4 @@
-package nonni.tutorialmod.items;
+package nonni.tutorialmod.objects.items;
 
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;

@@ -14,7 +14,8 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import nonni.tutorialmod.TutorialMod;
-import nonni.tutorialmod.util.RegisterBlocks;
+import nonni.tutorialmod.init.ModBlocks;
+import nonni.tutorialmod.init.ModItems;
 
 import java.util.ArrayList;
 
@@ -29,7 +30,7 @@ public class ModOreGen {
     public static void registerOres() {
         final int vein_size = 3;
         overWorldOres.add(register("blood_ore", Feature.ORE.withConfiguration(new OreFeatureConfig(
-                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, RegisterBlocks.BLOOD_ORE.get().getDefaultState(), vein_size))
+                OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ModBlocks.BLOOD_ORE.get().getDefaultState(), vein_size))
                 .range(20).square()// Spawn height start, right now 128 is the max
                 .func_242731_b(25)// Chunk spawn frequency (How many ores spawn per chunk - Mapping
         ));

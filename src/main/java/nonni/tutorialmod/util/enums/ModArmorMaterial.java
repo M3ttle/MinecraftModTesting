@@ -1,10 +1,9 @@
-package nonni.tutorialmod.armor;
+package nonni.tutorialmod.util.enums;
 
 import java.util.function.Supplier;
 
 
 import nonni.tutorialmod.TutorialMod;
-import nonni.tutorialmod.util.RegisterItems;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
@@ -13,6 +12,7 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import nonni.tutorialmod.init.ModItems;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 	
@@ -24,7 +24,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
 			2.0F,									// toughness. Multiplies and increases the dmgReductionArray (Not straight up dmgRedArray mulitply though)
 			1.0F,									// knockback resistance
 			() -> {									// Repair material
-				return Ingredient.fromItems(RegisterItems.BLOOD_INGOT.get());
+				return Ingredient.fromItems(ModItems.BLOOD_INGOT.get());
 			}	
 			);
 	

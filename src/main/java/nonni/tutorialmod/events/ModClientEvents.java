@@ -5,7 +5,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
-import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.text.StringTextComponent;
@@ -18,8 +17,8 @@ import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import nonni.tutorialmod.TutorialMod;
-import nonni.tutorialmod.util.RegisterBlocks;
-import nonni.tutorialmod.util.RegisterItems;
+import nonni.tutorialmod.init.ModBlocks;
+import nonni.tutorialmod.init.ModItems;
 
 // EventBus is something that manages and fires events for you
 // "Make sure to run this code when this event is fired"
@@ -41,13 +40,13 @@ public class ModClientEvents {
 
             World world = player.getEntityWorld();
             // add to player location -1 Y position
-            world.setBlockState(player.getPosition().add(0, -1, 0), RegisterBlocks.BLOOD_ORE.get().getDefaultState());
+            world.setBlockState(player.getPosition().add(0, -1, 0), ModBlocks.BLOOD_ORE.get().getDefaultState());
         }
     }
 
     @SubscribeEvent
     public static void onDamageSheep(AttackEntityEvent event) {
-        if (event.getEntityLiving().getHeldItemMainhand().getItem() == RegisterItems.SUPER_APPLE.get()) {
+        if (event.getEntityLiving().getHeldItemMainhand().getItem() == ModItems.SUPER_APPLE.get()) {
             if (event.getTarget().isAlive()) {
                 LivingEntity target = (LivingEntity) event.getTarget();
                 if (target instanceof SheepEntity) {

@@ -1,7 +1,8 @@
 package nonni.tutorialmod;
 
 
-import nonni.tutorialmod.util.RegisterItems;
+import nonni.tutorialmod.init.ModBlocks;
+import nonni.tutorialmod.init.ModItems;
 import nonni.tutorialmod.world.gen.ModOreGen;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +14,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import nonni.tutorialmod.util.RegistryHandler;
 
 // Tells Forge that this is a mod
 // ctrl + shift + o to automatically import package
@@ -34,8 +34,10 @@ public class TutorialMod {
 		// Sets listener to setup()
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
-		
-		RegistryHandler.init();
+
+		// Register blocks first since Items use Blocks
+		ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -55,7 +57,7 @@ public class TutorialMod {
 	public static final ItemGroup TAB = new ItemGroup("bloodTab") {
 		@Override
 		public ItemStack createIcon() {
-			return new ItemStack(RegisterItems.BLOOD_INGOT.get());// items.Apple, Blocks.Grass
+			return new ItemStack(ModItems.BLOOD_INGOT.get());// items.Apple, Blocks.Grass
 		}
 		
 	};

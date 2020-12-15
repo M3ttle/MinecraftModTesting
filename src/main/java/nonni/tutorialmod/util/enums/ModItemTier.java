@@ -1,10 +1,10 @@
-package nonni.tutorialmod.tools;
+package nonni.tutorialmod.util.enums;
 
 import java.util.function.Supplier;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
-import nonni.tutorialmod.util.RegisterItems;
+import nonni.tutorialmod.init.ModItems;
 
 public enum ModItemTier implements IItemTier {
 	// https://mcreator.net/wiki/how-make-tool
@@ -15,7 +15,7 @@ public enum ModItemTier implements IItemTier {
 	
 	// Attackspeed has base value of 4, what is then sent in is substraced from that
 	BLOOD(4, 1000, 20.0F, 33.0F, 50, () -> {
-		return Ingredient.fromItems(RegisterItems.BLOOD_INGOT.get());
+		return Ingredient.fromItems(ModItems.BLOOD_INGOT.get());
 	});
 	
 	private final int harvestLevel;
