@@ -22,7 +22,6 @@ import java.util.ArrayList;
 //@Mod.EventBusSubscriber(modid = TutorialMod.modid, bus = Mod.EventBusSubscriber.Bus.MOD)
 @Mod.EventBusSubscriber
 public class ModOreGen {
-
     private static final ArrayList<ConfiguredFeature<?, ?>> overWorldOres = new ArrayList<ConfiguredFeature<?, ?>>();
     private static final ArrayList<ConfiguredFeature<?, ?>> netherOres = new ArrayList<ConfiguredFeature<?, ?>>();
     private static final ArrayList<ConfiguredFeature<?, ?>> endOres = new ArrayList<ConfiguredFeature<?, ?>>();
@@ -70,6 +69,6 @@ public class ModOreGen {
     }
 
     private static <FC extends IFeatureConfig>ConfiguredFeature<FC, ?> register(String name, ConfiguredFeature<FC, ?> configuredFeature) {
-        return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, TutorialMod.modid + ":" + name, configuredFeature);
+        return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, TutorialMod.MODID + ":" + name, configuredFeature);
     };
 }

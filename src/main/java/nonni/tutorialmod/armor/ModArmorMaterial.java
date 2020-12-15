@@ -16,7 +16,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 	
-	BLOOD(TutorialMod.modid + ":blood",				// layer name
+	BLOOD(TutorialMod.MODID + ":blood",				// layer name
 			35,										// maxDmgFactor (iron is 15)
 			new int[] { 2, 5, 6, 2 }, 				// dmgReductionArray (helm, leg, chest, boots)
 			25, 									// enchantability

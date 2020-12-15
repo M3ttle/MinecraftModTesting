@@ -21,8 +21,9 @@ import nonni.tutorialmod.util.RegistryHandler;
 public class TutorialMod {
 	
 	public static TutorialMod instance;
-	public static final String modid = "tutorialmodnonna";
-	private static final Logger logger = LogManager.getLogger(modid);
+	public static final String MODID = "tutorialmodnonna";
+	public static final Logger LOGGER = LogManager.getLogger(MODID);
+	public static final int  oneSec = 20;
 	
 	// Ctrl + space, create constructor
 	public TutorialMod() {
@@ -41,13 +42,13 @@ public class TutorialMod {
 	
 	// Setup function
 	private void setup(final FMLCommonSetupEvent event) {
-		logger.info("Setup method registered.");
+		LOGGER.info("Setup method registered.");
 		ModOreGen.registerOres();
 	}
 	
 	// Client Registers
 	private void clientRegistries(final FMLClientSetupEvent event) {
-		logger.info("Client method registered.");
+		LOGGER.info("Client method registered.");
 	}
 	
 	// Create a new Item Group TAB
