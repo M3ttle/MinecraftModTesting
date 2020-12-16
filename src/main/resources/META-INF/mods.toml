@@ -24,15 +24,15 @@ version="0.1" #mandatory
  # A display name for the mod
 displayName="Blood Factory!" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification <here>
-updateJSONURL="http://nocando.is/" #optional
+updateJSONURL="https://github.com/M3ttle/MinecraftModTesting/issues" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="http://nocando.is/" #optional
+displayURL="https://github.com/M3ttle/MinecraftModTesting" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
+logoFile="logo.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks for this mod goes to all the cakes in the world!" #optional
+credits="All credit goes to TechnoVision from his awsome tutorials!" #optional
 # A text field displayed in the mod UI
-authors="Nonni" #optional
+authors="M3ttle" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 This is a learning curve mod to get a feeling for Minecraft Modding.
