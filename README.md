@@ -61,3 +61,6 @@ If at any point you are missing libraries in your IDE, or you've run into proble
 
 Step 4: Setup gradle to run the command ``./gradlew runClient`` or simply run it from your terminal from the root of the project.
 
+Issues / feedback
+==============================
+https://github.com/M3ttle/MinecraftModTesting/issues
