@@ -1,7 +1,11 @@
 package nonni.tutorialmod;
 
 
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
+import net.minecraftforge.fml.DeferredWorkQueue;
+import nonni.tutorialmod.entities.HogEntity;
 import nonni.tutorialmod.init.ModBlocks;
+import nonni.tutorialmod.init.ModEntityTypes;
 import nonni.tutorialmod.init.ModItems;
 import nonni.tutorialmod.world.gen.ModOreGen;
 import org.apache.logging.log4j.LogManager;
@@ -46,6 +50,11 @@ public class TutorialMod {
 	private void setup(final FMLCommonSetupEvent event) {
 		LOGGER.info("Setup method registered.");
 		ModOreGen.registerOres();
+		DeferredWorkQueue.runLater(() -> {
+			// Add all new entities here
+			// blockbench to create your own entity
+			GlobalEntityTypeAttributes.put(ModEntityTypes.HOG.get(), HogEntity.setCustomAttributes().create());
+		});
 	}
 	
 	// Client Registers
