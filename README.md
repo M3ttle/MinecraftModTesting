@@ -1,6 +1,6 @@
 About the project
 ==============================
-This is a simple mod followed by a tutorial from TechnoVision <https://github.com/TechnoVisionDev> to get started with the forge api and a decent feeling for the overall minecraft modding.\
+This is a simple Minecraft mod followed by a tutorial from TechnoVision <https://github.com/TechnoVisionDev> to get started with the forge api and a decent feeling for the overall minecraft modding.\
 All credit goes to him, big thanks to his great contribution!
 
 What has been implemented
