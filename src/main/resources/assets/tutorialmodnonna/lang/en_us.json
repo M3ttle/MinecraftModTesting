@@ -1,21 +1,22 @@
 {
-	
 	"item.tutorialmodnonna.blood_ingot": 		"Blood ingot",
 	"block.tutorialmodnonna.blood_block":		"Block of blood",
 	"block.tutorialmodnonna.blood_ore":			"Blood ore",
-	
+
 	"item.tutorialmodnonna.blood_helmet": 		"Blood Helmet",
 	"item.tutorialmodnonna.blood_chestplate": 	"Blood Chestplate",
 	"item.tutorialmodnonna.blood_leggings": 	"Blood Leggings",
 	"item.tutorialmodnonna.blood_boots": 		"Blood Boots",
-	
+
 	"item.tutorialmodnonna.super_apple": 		"Super Apple",
-	
+
 	"item.tutorialmodnonna.blood_sword": 		"Blood Sword",
 	"item.tutorialmodnonna.blood_pickaxe": 		"Blood Pickaxe",
 	"item.tutorialmodnonna.blood_axe": 			"Blood Axel",
 	"item.tutorialmodnonna.blood_shovel": 		"Blood Shovel",
 	"item.tutorialmodnonna.blood_hoe": 			"Blood Hoe",
-	
-	"itemGroup.bloodTab": 						"Blood Stuff"
+
+	"itemGroup.bloodTab": 						"Blood Stuff",
+
+	"entity.tutorialmodnonna.hog": 				"Froggy"
 }

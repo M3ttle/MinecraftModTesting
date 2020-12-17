@@ -19,6 +19,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import nonni.tutorialmod.TutorialMod;
 import nonni.tutorialmod.init.ModEntityTypes;
 
 import javax.annotation.Nullable;
@@ -46,6 +47,7 @@ public class HogEntity extends AnimalEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
+        this.eatGrassgoal = new EatGrassGoal(this);
         this.goalSelector.addGoal(0, new SwimGoal(this)); // 0 is highest priority
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.250F));// If you hit the entity it will panic and run around
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0F));
@@ -96,18 +98,23 @@ public class HogEntity extends AnimalEntity {
 
     @Override
     public void livingTick() {
+        super.livingTick();
         if (this.world.isRemote) {
             this.hogTimer = Math.max(0, this.hogTimer-1);
         }
-        super.livingTick();
     }
 
     @OnlyIn(Dist.CLIENT)
     public void handleStatusUpdate (byte id) {
+        //TODO remove
+        TutorialMod.LOGGER.info("id: " + id);
         if (id == 10) {
+            TutorialMod.LOGGER.info("Came into handleStatusUpdate");
             this.hogTimer = 40;
+            this.handleRunningEffect();
         } else {
             super.handleStatusUpdate(id);
         }
     }
+
 }

@@ -1,6 +1,5 @@
 package nonni.tutorialmod;
 
-
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import nonni.tutorialmod.entities.HogEntity;
@@ -42,6 +41,7 @@ public class TutorialMod {
 		// Register blocks first since Items use Blocks
 		ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 		
 		MinecraftForge.EVENT_BUS.register(this);
 	}
@@ -50,6 +50,7 @@ public class TutorialMod {
 	private void setup(final FMLCommonSetupEvent event) {
 		LOGGER.info("Setup method registered.");
 		ModOreGen.registerOres();
+
 		DeferredWorkQueue.runLater(() -> {
 			// Add all new entities here
 			// blockbench to create your own entity

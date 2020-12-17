@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import nonni.tutorialmod.TutorialMod;
 import nonni.tutorialmod.entities.HogEntity;
 
+
 public class ModEntityTypes {
 
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, TutorialMod.MODID);
@@ -17,5 +18,5 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<HogEntity>> HOG = ENTITY_TYPES.register("hog",
             () -> EntityType.Builder.create(HogEntity::new, EntityClassification.CREATURE)
                 .size(1.0f, 1.0f)
-                .build(new ResourceLocation(TutorialMod.MODID, "hog").toString()));
+                .build(new ResourceLocation(TutorialMod.MODID, "hog").toString() ));
 }

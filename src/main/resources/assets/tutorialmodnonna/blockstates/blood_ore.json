@@ -1,7 +1,5 @@
 {
 	"variants": {
-		"": {
-			"model": "tutorialmodnonna:block/blood_ore"
-		}
+		"": { "model": "tutorialmodnonna:block/blood_ore" }
 	}
 }
