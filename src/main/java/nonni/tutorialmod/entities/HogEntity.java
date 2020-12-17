@@ -68,14 +68,14 @@ public class HogEntity extends AnimalEntity {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_DOLPHIN_AMBIENT_WATER;
+        return SoundEvents.ENTITY_PIG_AMBIENT;
     }
 
     @Override
-    protected SoundEvent getDeathSound() { return SoundEvents.ENTITY_DOLPHIN_DEATH; }
+    protected SoundEvent getDeathSound() { return SoundEvents.ENTITY_PIG_DEATH; }
 
     @Override
-    protected SoundEvent getHurtSound(DamageSource damageSourceIn) { return SoundEvents.ENTITY_DOLPHIN_HURT; }
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) { return SoundEvents.ENTITY_PIG_HURT; }
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
@@ -107,9 +107,13 @@ public class HogEntity extends AnimalEntity {
     @OnlyIn(Dist.CLIENT)
     public void handleStatusUpdate (byte id) {
         //TODO remove
-        TutorialMod.LOGGER.info("id: " + id);
+
+        TutorialMod.LOGGER.info("!!!!!!!!!!!!    id: " + id);
+
         if (id == 10) {
+
             TutorialMod.LOGGER.info("Came into handleStatusUpdate");
+
             this.hogTimer = 40;
             this.handleRunningEffect();
         } else {
