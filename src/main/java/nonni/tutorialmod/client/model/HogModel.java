@@ -10,8 +10,6 @@ import nonni.tutorialmod.entities.HogEntity;
 
 public class HogModel<T extends HogEntity> extends EntityModel<T> {
     private final ModelRenderer body;
-    private final ModelRenderer rotation;
-    private final ModelRenderer body_sub_1;
     private final ModelRenderer head;
     private final ModelRenderer legBackLeft;
     private final ModelRenderer legBackRight;

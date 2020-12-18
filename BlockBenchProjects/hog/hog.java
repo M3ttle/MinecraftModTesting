@@ -18,11 +18,11 @@ public class custom_model extends EntityModel<Entity> {
 		textureHeight = 32;
 
 		body = new ModelRenderer(this);
-		body.setRotationPoint(0.0F, 11.0F, 2.0F);
+		body.setRotationPoint(0.0F, 14.0F, 0.0F);
 		
 
 		rotation = new ModelRenderer(this);
-		rotation.setRotationPoint(0.0F, 0.0F, 0.0F);
+		rotation.setRotationPoint(0.0F, -3.0F, 2.0F);
 		body.addChild(rotation);
 		setRotationAngle(rotation, 1.5708F, 0.0F, 0.0F);
 		
